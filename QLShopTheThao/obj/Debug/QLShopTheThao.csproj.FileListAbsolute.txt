@@ -1,0 +1,13 @@
+c:\users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\bin\Debug\QLShopTheThao.exe
+c:\users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\bin\Debug\QLShopTheThao.pdb
+c:\users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.csprojResolveAssemblyReference.cache
+c:\users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.Properties.Resources.resources
+c:\users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.csproj.GenerateResource.Cache
+c:\users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.exe.licenses
+c:\users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.exe
+c:\users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.pdb
+C:\Users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\bin\Debug\QLShopTheThao.exe.config
+C:\Users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.frm_dn.resources
+C:\Users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.frm_QLND.resources
+C:\Users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.frm_Home.resources
+C:\Users\hotha\documents\visual studio 2013\Projects\QLShopTheThao\QLShopTheThao\obj\Debug\QLShopTheThao.frmUser.resources

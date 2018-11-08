@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLSQA">
+  <DataContextMoniker Name="/QLSQADataContext" />
+  <nestedChildShapes>
+    <classShape Id="21d877b4-9635-458e-ae39-c535c3c649e9" absoluteBounds="2.25, 1.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/QLSQADataContext/db_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e818f8b2-bef8-410e-8b26-04cf723d0866" absoluteBounds="2.265, 1.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
