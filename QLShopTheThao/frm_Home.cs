@@ -20,30 +20,62 @@ namespace QLShopTheThao
             InitializeComponent();
         }
 
-        
 
-        private void btnDanhMuc_ItemClick(object sender, ItemClickEventArgs e)
+        private bool ExistForm(XtraForm form)
         {
-
+            foreach (var child in MdiChildren)
+            {
+                if(child.Name==form.Name)
+                {
+                    child.Activate();
+                    return true;
+                }
+            }
+            return false;
         }
-
-        private void btnUser_ItemClick(object sender, ItemClickEventArgs e)
+        private void frm_Home_Load(object sender, EventArgs e)
         {
             
         }
 
-        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var form = new frm_QLND();
-            form.MdiParent = this;            form.Show();        }
+        
 
-        /*private bool ExistForm(Xtra)
+        private void barproduct_ItemClick(object sender, ItemClickEventArgs e)
         {
-
-        }*/
-        private void frm_Home_Load(object sender, EventArgs e)
-        {
-
+            var form = new frmProduct();
+            if (ExistForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
         }
+
+        private void baruser_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var form = new frmUser();
+            if (ExistForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void barcustomer_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var form = new frmCustomer();
+            if (ExistForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void barlogout_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
+
+        private void barbill_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var form = new frmBill();
+            if (ExistForm(form)) return;
+            form.MdiParent = this;
+            form.Show();
+        }
+
     }
 }

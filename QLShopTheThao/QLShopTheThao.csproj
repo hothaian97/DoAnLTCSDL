@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.BonusSkins.v17.1" />
     <Reference Include="DevExpress.Data.v17.1" />
     <Reference Include="DevExpress.Images.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -41,9 +45,15 @@
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1" />
     <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,17 +64,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBill.Designer.cs">
+      <DependentUpon>frmBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystal.Designer.cs">
+      <DependentUpon>frmCrystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_dn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_dn.Designer.cs">
-      <DependentUpon>frm_dn.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Home.cs">
       <SubType>Form</SubType>
@@ -72,31 +118,47 @@
     <Compile Include="frm_Home.Designer.cs">
       <DependentUpon>frm_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_QLND.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_QLND.Designer.cs">
-      <DependentUpon>frm_QLND.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLShopTheThaoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLShopTheThaoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLSQA.designer.cs" />
     <Compile Include="QLSQA1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSQA.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBill.resx">
+      <DependentUpon>frmBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystal.resx">
+      <DependentUpon>frmCrystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_dn.resx">
-      <DependentUpon>frm_dn.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_Home.resx">
       <DependentUpon>frm_Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_QLND.resx">
-      <DependentUpon>frm_QLND.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -109,9 +171,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
     <None Include="QLSQA.dbml.layout">
       <DependentUpon>QLSQA.dbml</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="QLShopTheThaoDataSet.xsc">
+      <DependentUpon>QLShopTheThaoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLShopTheThaoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLShopTheThaoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLShopTheThaoDataSet.xss">
+      <DependentUpon>QLShopTheThaoDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,16 +195,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="QLSQA.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>QLSQA1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\iconperson.png" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +216,73 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win10Gray.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Win10Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\juventus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PictureProduct\adidas1.jpg" />
+    <Content Include="PictureProduct\adidas2.jpg" />
+    <Content Include="PictureProduct\adidas3.jpg" />
+    <Content Include="PictureProduct\adidas4.jpg" />
+    <Content Include="PictureProduct\atmsankhach.jpg" />
+    <Content Include="PictureProduct\atmsannha.jpg" />
+    <Content Include="PictureProduct\banh1.jpg" />
+    <Content Include="PictureProduct\banh2.jpg" />
+    <Content Include="PictureProduct\banh3.jpg" />
+    <Content Include="PictureProduct\banh4.jpg" />
+    <Content Include="PictureProduct\barsankhach.jpg" />
+    <Content Include="PictureProduct\barsannha.jpg" />
+    <Content Include="PictureProduct\bel.jpg" />
+    <Content Include="PictureProduct\chesankhach.jpg" />
+    <Content Include="PictureProduct\chesannha.jpeg" />
+    <Content Include="PictureProduct\duc.jpg" />
+    <Content Include="PictureProduct\gang1.jpg" />
+    <Content Include="PictureProduct\gang2.jpg" />
+    <Content Include="PictureProduct\gang3.jpg" />
+    <Content Include="PictureProduct\gang4.jpg" />
+    <Content Include="PictureProduct\hansankhach.jpg" />
+    <Content Include="PictureProduct\hansannha.jpg" />
+    <Content Include="PictureProduct\ita.jpg" />
+    <Content Include="PictureProduct\jan.jpg" />
+    <Content Include="PictureProduct\mcsankhach.jpg" />
+    <Content Include="PictureProduct\mcsannha.jpg" />
+    <Content Include="PictureProduct\musankhach.jpg" />
+    <Content Include="PictureProduct\musannha.jpg" />
+    <Content Include="PictureProduct\nike1.jpg" />
+    <Content Include="PictureProduct\nike2.jpg" />
+    <Content Include="PictureProduct\nike3.jpg" />
+    <Content Include="PictureProduct\nike4.jpg" />
+    <Content Include="PictureProduct\osasannha.jpg" />
+    <Content Include="PictureProduct\realsankhach.jpg" />
+    <Content Include="PictureProduct\realsannha.jpg" />
+    <Content Include="PictureProduct\sevsannha.jpg" />
+    <Content Include="PictureProduct\tbn.jpg" />
+    <Content Include="PictureProduct\totsankhach.jpg" />
+    <Content Include="PictureProduct\totsannha.jpg" />
+    <Content Include="PictureProduct\vietnam.jpg" />
+    <Content Include="PictureProduct\vo1.jpg" />
+    <Content Include="PictureProduct\vo2.jpg" />
+    <Content Include="PictureProduct\vo3.jpeg" />
+    <Content Include="PictureProduct\vo4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

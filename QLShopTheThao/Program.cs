@@ -22,7 +22,7 @@ namespace QLShopTheThao
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new frm_dn());
+            Application.Run(new frmLogin());
         }
     }
 }
