@@ -12,8 +12,13 @@ using System.Data.SqlClient;
 
 namespace QLShopTheThao
 {
+
     public partial class frmCrystal : DevExpress.XtraEditors.XtraForm
     {
+        SqlConnection cnn;
+        SqlDataAdapter da;
+        DataTable dt_hoadon;
+        DataTable dt_chitiethoadon;
         public frmCrystal()
         {
             InitializeComponent();
@@ -26,51 +31,23 @@ namespace QLShopTheThao
 
         private void frmCrystal_Load(object sender, EventArgs e)
         {
+            cnn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLShopTheThao;Integrated Security=True");
+            da = new SqlDataAdapter("Select * from db_HoaDon", cnn);
+            dt_hoadon = new DataTable();
+            da.Fill(dt_hoadon);
 
+            da.SelectCommand.CommandText = " select hd.MaHD,kh.TenKH,sp.TenSP,ctdh.SoLuong,TongTien,ThanhTien "
+                                            + " from db_HoaDon hd join db_ChiTietDonHang ctdh on hd.MaHD = ctdh.MaHD join db_KhachHang kh on hd.MaKH = kh.MaKH, db_SanPham sp"
+                                            + " where hd.MaKH = kh.MaKH and hd.MaHD = ctdh.MaHD and sp.MaSP = ctdh.MaSP";
+
+            dt_chitiethoadon = new DataTable();
+            da.Fill(dt_chitiethoadon);
+
+            CrystalReport2 rpt = new CrystalReport2();
+            rpt.SetDataSource(dt_chitiethoadon.DefaultView);
+            crystalReportViewer1.ReportSource = rpt;
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            using (QLSQADataContext _db = new QLSQADataContext())
-            {
-                //var item2 = (from tb in _db.db_KhachHangs where tb.MaKH == 1 select tb).FirstOrDefault();
-                //SqlDataAdapter da = new SqlDataAdapter(_db.Connection.ConnectionString,)
-                //var item = (from tb in _db.db_ChiTietDonHangs
-                //join tb2 in _db.db_DonDatHangs on tb.MaDonDatHang equals tb2.MaDonDatHang
-                //where tb2.MaKH == item2.MaKH
-                //select new
-                //{
-                //tb2.db_KhachHang.TenKH,
-                //tb.db_SanPham.TenSP,
-                //tb.SoLuongDat,
-                //tb.DonGiaDat,
-                //tb.db_DonDatHang.ThanhTienDH,
-                //}).ToList();                
-                //var item1 = _db.db_ChiTietDonDatHangs.Join(_db.db_DonDatHangs, r => r.MaDonDatHang, ct => ct.MaDonDatHang, (r, ct) => new {db_ChiTietDonDatHang = r,db_DonDatHang = ct }).Where(a=>a.db_DonDatHang.MaKH == item2.MaKH).Select(p => new
-                //{
-                /*TenKH = p.db_DonDatHang.db_KhachHang.TenKH,
-                TenSP = p.db_ChiTietDonDatHang.db_SanPham.TenSP,
-                //SoLuongDat = p.db_ChiTietDonDatHang.SoLuongDat,
-                //DonGiaDat = p.db_ChiTietDonDatHang.DonGiaDat,
-                //ThanhTienDH = p.db_DonDatHang.ThanhTienDH,
-            }).ToList();
-
-            if (item == null)
-            {
-                MessageBox.Show("null");
-            }
-            else
-            {
-                CrystalReport1 rpt = new CrystalReport1();
-                rpt.Load(@"CrystalReport1.rpt");
-                rpt.SetDataSource(item);
-                //ds.Tables.Add(item)
-                this.crystalReportViewer1.ReportSource = rpt;
-            }
-
-        }*/
-            }
-        }
     }
 }

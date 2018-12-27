@@ -120,16 +120,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLShopTheThaoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLShopTheThaoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="QLSQA.designer.cs" />
     <Compile Include="QLSQA1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSQA.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="QLSQA2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSQA.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -175,17 +175,6 @@
       <DependentUpon>QLSQA.dbml</DependentUpon>
     </None>
     <None Include="app.config" />
-    <None Include="QLShopTheThaoDataSet.xsc">
-      <DependentUpon>QLShopTheThaoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLShopTheThaoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLShopTheThaoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLShopTheThaoDataSet.xss">
-      <DependentUpon>QLShopTheThaoDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -205,6 +194,17 @@
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>QLSQA1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSQA.xsc">
+      <DependentUpon>QLSQA.xsd</DependentUpon>
+    </None>
+    <None Include="QLSQA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSQA2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QLSQA.xss">
+      <DependentUpon>QLSQA.xsd</DependentUpon>
     </None>
     <None Include="Resources\iconperson.png" />
   </ItemGroup>

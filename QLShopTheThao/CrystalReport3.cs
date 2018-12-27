@@ -16,14 +16,14 @@ namespace QLShopTheThao {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport2 : ReportClass {
+    public class CrystalReport3 : ReportClass {
         
-        public CrystalReport2() {
+        public CrystalReport3() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport2.rpt";
+                return "CrystalReport3.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace QLShopTheThao {
         
         public override string FullResourceName {
             get {
-                return "QLShopTheThao.CrystalReport2.rpt";
+                return "QLShopTheThao.CrystalReport3.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace QLShopTheThao {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection2 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -82,7 +82,7 @@ namespace QLShopTheThao {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection2 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[4];
             }
@@ -106,9 +106,9 @@ namespace QLShopTheThao {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport2 : Component, ICachedReport {
+    public class CachedCrystalReport3 : Component, ICachedReport {
         
-        public CachedCrystalReport2() {
+        public CachedCrystalReport3() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace QLShopTheThao {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport2 rpt = new CrystalReport2();
+            CrystalReport3 rpt = new CrystalReport3();
             rpt.Site = this.Site;
             return rpt;
         }
