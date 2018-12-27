@@ -32,5 +32,26 @@ namespace QLShopTheThao.Properties {
                 return ((string)(this["QLShopTheThaoConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=QLShopTheThao;Integrated Security=True")]
+        public string QLShopTheThaoConnectionString {
+            get {
+                return ((string)(this["QLShopTheThaoConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1IAEAGU\\SQLEXPRESS;Initial Catalog=QLShopTheThao;Integrated S" +
+            "ecurity=True")]
+        public string QLShopTheThaoConnectionString2 {
+            get {
+                return ((string)(this["QLShopTheThaoConnectionString2"]));
+            }
+        }
     }
 }

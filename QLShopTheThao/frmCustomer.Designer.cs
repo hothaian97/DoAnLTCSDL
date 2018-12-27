@@ -56,6 +56,13 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdtKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTInh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelnutlenh.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -88,6 +95,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(287, 38);
             this.simpleButton1.TabIndex = 29;
             this.simpleButton1.Text = "Tìm kiếm";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnthoat
             // 
@@ -314,12 +322,20 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaKH,
+            this.TenKH,
+            this.DiaChiKH,
+            this.sdtKH,
+            this.GioiTInh,
+            this.NgaySinh,
+            this.EmailKH});
             this.dataGridView1.Location = new System.Drawing.Point(3, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1032, 466);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -341,6 +357,59 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(325, 539);
             this.panel1.TabIndex = 4;
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "MaKH";
+            this.MaKH.HeaderText = "Mã khách hàng";
+            this.MaKH.Name = "MaKH";
+            this.MaKH.ReadOnly = true;
+            this.MaKH.Width = 120;
+            // 
+            // TenKH
+            // 
+            this.TenKH.DataPropertyName = "TenKH";
+            this.TenKH.HeaderText = "Tên khách hàng";
+            this.TenKH.Name = "TenKH";
+            this.TenKH.ReadOnly = true;
+            this.TenKH.Width = 120;
+            // 
+            // DiaChiKH
+            // 
+            this.DiaChiKH.DataPropertyName = "DiaChiKH";
+            this.DiaChiKH.HeaderText = "Địa chỉ khách hàng";
+            this.DiaChiKH.Name = "DiaChiKH";
+            this.DiaChiKH.ReadOnly = true;
+            this.DiaChiKH.Width = 130;
+            // 
+            // sdtKH
+            // 
+            this.sdtKH.DataPropertyName = "sdtKH";
+            this.sdtKH.HeaderText = "SDT khách hàng";
+            this.sdtKH.Name = "sdtKH";
+            this.sdtKH.ReadOnly = true;
+            this.sdtKH.Width = 120;
+            // 
+            // GioiTInh
+            // 
+            this.GioiTInh.DataPropertyName = "GioiTInh";
+            this.GioiTInh.HeaderText = "Giới tính";
+            this.GioiTInh.Name = "GioiTInh";
+            this.GioiTInh.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày Sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // EmailKH
+            // 
+            this.EmailKH.DataPropertyName = "EmailKH";
+            this.EmailKH.HeaderText = "Email";
+            this.EmailKH.Name = "EmailKH";
+            this.EmailKH.ReadOnly = true;
             // 
             // frmCustomer
             // 
@@ -394,5 +463,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChiKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdtKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTInh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailKH;
     }
 }

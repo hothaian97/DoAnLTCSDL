@@ -58,6 +58,14 @@
             this.lb2 = new System.Windows.Forms.Label();
             this.txttnd = new System.Windows.Forms.TextBox();
             this.lb1 = new System.Windows.Forms.Label();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDangNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vaitro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinhDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panelnutlenh.SuspendLayout();
@@ -71,13 +79,22 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaNV,
+            this.TenNV,
+            this.TenDangNhap,
+            this.MatKhau,
+            this.EmailDK,
+            this.NgaySinh,
+            this.Vaitro,
+            this.GioiTinhDK});
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.Location = new System.Drawing.Point(3, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1039, 477);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -369,6 +386,63 @@
             this.lb1.TabIndex = 0;
             this.lb1.Text = "Tên người dùng:";
             // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            // 
+            // TenNV
+            // 
+            this.TenNV.DataPropertyName = "TenNV";
+            this.TenNV.HeaderText = "Tên nhân viên";
+            this.TenNV.Name = "TenNV";
+            this.TenNV.ReadOnly = true;
+            // 
+            // TenDangNhap
+            // 
+            this.TenDangNhap.DataPropertyName = "TenDangNhap";
+            this.TenDangNhap.HeaderText = "Tên đăng nhập";
+            this.TenDangNhap.Name = "TenDangNhap";
+            this.TenDangNhap.ReadOnly = true;
+            this.TenDangNhap.Width = 120;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.HeaderText = "Mật khẩu";
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.ReadOnly = true;
+            // 
+            // EmailDK
+            // 
+            this.EmailDK.DataPropertyName = "EmailDK";
+            this.EmailDK.HeaderText = "Email";
+            this.EmailDK.Name = "EmailDK";
+            this.EmailDK.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // Vaitro
+            // 
+            this.Vaitro.DataPropertyName = "Vaitro";
+            this.Vaitro.HeaderText = "Vai trò";
+            this.Vaitro.Name = "Vaitro";
+            this.Vaitro.ReadOnly = true;
+            // 
+            // GioiTinhDK
+            // 
+            this.GioiTinhDK.DataPropertyName = "GioiTinhDK";
+            this.GioiTinhDK.HeaderText = "Giới tính";
+            this.GioiTinhDK.Name = "GioiTinhDK";
+            this.GioiTinhDK.ReadOnly = true;
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,6 +498,14 @@
         private DevExpress.XtraEditors.SimpleButton btnthem;
         private DevExpress.XtraEditors.SimpleButton btnthoat;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDangNhap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailDK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vaitro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinhDK;
 
     }
 }

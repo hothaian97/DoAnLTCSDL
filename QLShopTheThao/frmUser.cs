@@ -161,6 +161,34 @@ namespace QLShopTheThao
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void frmUser_Load(object sender, EventArgs e)
+        {
+            cleardata();
+            loadata();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            using (_db = new QLSQADataContext())
+            {
+                var item = _db.db_Users.Where(r => r.TenNV.Contains(txttnd.Text) && r.TenDangNhap.Contains(txttdn.Text) && r.EmailDK.Contains(txtemail.Text));
+                if (item != null)
+                {
+                    dataGridView1.DataSource = item;
+                }
+                else if (item == null)
+                {
+                    MessageBox.Show("Không", "Thông báo", MessageBoxButtons.OK);
+                }
+                cleardata();
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             try
             {
                 txttnd.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -182,38 +210,6 @@ namespace QLShopTheThao
             catch (Exception ex)
             {
                 throw ex;
-            }
-        }
-
-        private void frmUser_Load(object sender, EventArgs e)
-        {
-            cleardata();
-            loadata();
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            bool flag;
-            if (rdbnam.Checked == true)
-            {
-                flag = true;
-            }
-            else
-            {
-                flag = false;
-            }
-            using (_db = new QLSQADataContext())
-            {
-                var item = _db.db_Users.Where(r => r.TenNV.Contains(txttnd.Text) && r.TenDangNhap.Contains(txttdn.Text) && r.EmailDK.Contains(txtemail.Text));
-                if (item != null)
-                {
-                    dataGridView1.DataSource = item;
-                }
-                else if (item == null)
-                {
-                    MessageBox.Show("Không", "Thông báo", MessageBoxButtons.OK);
-                }
-                cleardata();
             }
         }
     }

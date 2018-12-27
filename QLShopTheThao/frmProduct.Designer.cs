@@ -44,17 +44,28 @@
             this.lb3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picProduct = new DevExpress.XtraEditors.PictureEdit();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtanh = new System.Windows.Forms.TextBox();
+            this.Anh = new System.Windows.Forms.Label();
             this.lb2 = new System.Windows.Forms.Label();
             this.txttensp = new System.Windows.Forms.TextBox();
             this.lb1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.picProduct = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnhSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panelnutlenh.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProduct.Properties)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +105,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(264, 38);
             this.simpleButton1.TabIndex = 29;
             this.simpleButton1.Text = "Tìm kiếm";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnthoat
             // 
@@ -207,13 +219,15 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.picProduct);
+            this.panel2.Controls.Add(this.simpleButton2);
+            this.panel2.Controls.Add(this.txtanh);
+            this.panel2.Controls.Add(this.Anh);
             this.panel2.Controls.Add(this.panelnutlenh);
             this.panel2.Controls.Add(this.txtgia);
+            this.panel2.Controls.Add(this.lb2);
             this.panel2.Controls.Add(this.lb4);
             this.panel2.Controls.Add(this.txtsoluong);
             this.panel2.Controls.Add(this.lb3);
-            this.panel2.Controls.Add(this.lb2);
             this.panel2.Controls.Add(this.txttensp);
             this.panel2.Controls.Add(this.lb1);
             this.panel2.Location = new System.Drawing.Point(3, 62);
@@ -221,20 +235,37 @@
             this.panel2.Size = new System.Drawing.Size(310, 428);
             this.panel2.TabIndex = 1;
             // 
-            // picProduct
+            // simpleButton2
             // 
-            this.picProduct.Cursor = System.Windows.Forms.Cursors.Default;
-            this.picProduct.Location = new System.Drawing.Point(113, 59);
-            this.picProduct.Name = "picProduct";
-            this.picProduct.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.picProduct.Properties.ZoomAccelerationFactor = 1D;
-            this.picProduct.Size = new System.Drawing.Size(111, 96);
-            this.picProduct.TabIndex = 16;
+            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(113, 52);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(78, 38);
+            this.simpleButton2.TabIndex = 23;
+            this.simpleButton2.Text = "Open";
+            this.simpleButton2.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtanh
+            // 
+            this.txtanh.Location = new System.Drawing.Point(113, 134);
+            this.txtanh.Name = "txtanh";
+            this.txtanh.Size = new System.Drawing.Size(188, 21);
+            this.txtanh.TabIndex = 20;
+            // 
+            // Anh
+            // 
+            this.Anh.AutoSize = true;
+            this.Anh.Location = new System.Drawing.Point(10, 137);
+            this.Anh.Name = "Anh";
+            this.Anh.Size = new System.Drawing.Size(26, 13);
+            this.Anh.TabIndex = 19;
+            this.Anh.Text = "Ảnh";
             // 
             // lb2
             // 
             this.lb2.AutoSize = true;
-            this.lb2.Location = new System.Drawing.Point(10, 73);
+            this.lb2.Location = new System.Drawing.Point(10, 64);
             this.lb2.Name = "lb2";
             this.lb2.Size = new System.Drawing.Size(76, 13);
             this.lb2.TabIndex = 2;
@@ -256,11 +287,28 @@
             this.lb1.TabIndex = 0;
             this.lb1.Text = "Tên Sản Phẩm";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.picProduct);
+            this.panel3.Location = new System.Drawing.Point(650, 65);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(355, 463);
+            this.panel3.TabIndex = 21;
+            // 
+            // picProduct
+            // 
+            this.picProduct.Location = new System.Drawing.Point(6, 6);
+            this.picProduct.Name = "picProduct";
+            this.picProduct.Size = new System.Drawing.Size(346, 454);
+            this.picProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProduct.TabIndex = 18;
+            this.picProduct.TabStop = false;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(311, 11);
+            this.label9.Location = new System.Drawing.Point(158, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(299, 32);
             this.label9.TabIndex = 3;
@@ -271,12 +319,53 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaSP,
+            this.TenSP,
+            this.SoLuongSP,
+            this.GiaSP,
+            this.AnhSP});
             this.dataGridView1.Location = new System.Drawing.Point(1, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1041, 466);
+            this.dataGridView1.Size = new System.Drawing.Size(599, 466);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // MaSP
+            // 
+            this.MaSP.DataPropertyName = "MaSP";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.Name = "TenSP";
+            this.TenSP.ReadOnly = true;
+            // 
+            // SoLuongSP
+            // 
+            this.SoLuongSP.DataPropertyName = "SoLuongSP";
+            this.SoLuongSP.HeaderText = "Số lượng";
+            this.SoLuongSP.Name = "SoLuongSP";
+            this.SoLuongSP.ReadOnly = true;
+            // 
+            // GiaSP
+            // 
+            this.GiaSP.DataPropertyName = "GiaSP";
+            this.GiaSP.HeaderText = "Giá sản phẩm";
+            this.GiaSP.Name = "GiaSP";
+            this.GiaSP.ReadOnly = true;
+            // 
+            // AnhSP
+            // 
+            this.AnhSP.DataPropertyName = "AnhSP";
+            this.AnhSP.HeaderText = "Ảnh sản phẩm";
+            this.AnhSP.Name = "AnhSP";
+            this.AnhSP.ReadOnly = true;
             // 
             // panel4
             // 
@@ -284,11 +373,16 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Location = new System.Drawing.Point(2, -2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1049, 569);
             this.panel4.TabIndex = 7;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmProduct
             // 
@@ -305,7 +399,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picProduct.Properties)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -337,7 +432,16 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.PictureEdit picProduct;
-
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtanh;
+        private System.Windows.Forms.Label Anh;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox picProduct;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnhSP;
     }
 }

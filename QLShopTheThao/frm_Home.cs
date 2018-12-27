@@ -66,7 +66,10 @@ namespace QLShopTheThao
 
         private void barlogout_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            this.Hide();
+            var flogin = new frmLogin();
+            flogin.Closed += (s, args) => this.Close();
+            flogin.Show();
         }
 
         private void barbill_ItemClick(object sender, ItemClickEventArgs e)

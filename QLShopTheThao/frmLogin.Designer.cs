@@ -43,7 +43,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.BackgroundImage = global::QLShopTheThao.Properties.Resources.loginbg1;
+            this.panel2.BackgroundImage = global::QLShopTheThao.Properties.Resources.login2;
             this.panel2.Controls.Add(this.simpleButton2);
             this.panel2.Controls.Add(this.simpleButton1);
             this.panel2.Controls.Add(this.label3);

@@ -141,6 +141,34 @@ namespace QLShopTheThao
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void frmCustomer_Load(object sender, EventArgs e)
+        {
+            cleardata();
+            loadata();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            using (_db = new QLSQADataContext())
+            {
+                var item = _db.db_KhachHangs.Where(r => r.TenKH.Contains(txttenkh.Text) && r.DiaChiKH.Contains(txtdiachi.Text) && r.EmailKH.Contains(txtemail.Text));
+                if (item != null)
+                {
+                    dataGridView1.DataSource = item;
+                }
+                else if (item == null)
+                {
+                    MessageBox.Show("Không", "Thông báo", MessageBoxButtons.OK);
+                }
+                cleardata();
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             try
             {
                 txttenkh.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -156,18 +184,12 @@ namespace QLShopTheThao
                 else
                 {
                     rdbnu.Checked = true;
-                }               
+                }              
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-        }
-
-        private void frmCustomer_Load(object sender, EventArgs e)
-        {
-            cleardata();
-            loadata();
         }
     }
 }
